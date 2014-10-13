@@ -1,4 +1,27 @@
 Rails.application.routes.draw do
+
+  get 'movies/index'
+
+  get 'tvshows/show_friends'
+
+  get 'tvshows/show_gilmore_girls'
+
+  get 'movies/show_matilda'
+
+  get 'movies/show_gladiator'
+
+  get '/movies/gladiator', to: 'movies#show_gladiator'
+
+  get '/movies/matilda', to: 'movies#show_matilda'
+
+  get '/tvshows/gilmore_girls', to: 'tvshows#show_gilmore_girls'
+
+  get '/tvshows/friends', to: 'tvshows#show_friends'
+
+  get "/", to: 'movies#index'
+
+  root 'movies#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
